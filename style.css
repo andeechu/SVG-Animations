@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    text-align: center;
+}
+
+.flip {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+#sclera {
+    animation: blink 2.4s infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#iris {
+    animation: squeeze 2.4s infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#pupil {
+    animation: squeeze 2.4s infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+#mouth {
+    animation: move 4.8s infinite linear;
+}
+
+@keyframes blink{
+    90% {
+        transform: none;
+        animation-timing-function: ease-in;
+    }
+    93% {
+        transform: translateY(15px) scaleY(0)
+    }
+    100% {
+        animation-timing-function: ease-out;
+    }
+}
+
+@keyframes squeeze{
+    90% {
+      transform: none;
+      animation-timing-function: ease-in;
+    }
+    93% {
+      transform: scaleY(0.8)
+    }
+    100% {
+      animation-timing-function: ease-out;
+    }
+}
+
+@keyframes move{
+    90% {
+        transform: none;
+        animation-timing-function: ease-in;
+    }
+    93% {
+        transform: translateY(6px)
+    }
+    100% {
+        animation-timing-function: ease-out;
+    }
+}
