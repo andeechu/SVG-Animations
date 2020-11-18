@@ -73,3 +73,17 @@
         animation-timing-function: ease-out;
     }
 }
+
+#cookie_svg {
+    animation: rotate 2s infinite linear;
+
+}
+
+@keyframes rotate{
+    from {
+        transform: none;
+    }
+    to {
+        transform: rotate(360deg)
+    }
+}
