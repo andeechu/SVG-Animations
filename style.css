@@ -74,16 +74,37 @@
     }
 }
 
-#cookie_svg {
-    animation: rotate 2s infinite linear;
+#chip_fill_1, #chip_fill_2, #chip_fill_3, #chip_outline_1, #chip_outline_2, #chip_outline_3, #sm_chips {
+    animation: rotate 4s infinite linear;
+    transform-origin: 50% 50%;
+    display: inline-block;
+}
 
+#glossy_detail, #glossy_point {
+    animation: twitch 2s infinite linear;
+    transform-origin: 50% 50%;
+    display: inline-block;
 }
 
 @keyframes rotate{
-    from {
-        transform: none;
+    0% {
+        transform: rotate(0deg)
     }
-    to {
+    100% {
         transform: rotate(360deg)
+    }
+}
+
+@keyframes twitch{
+    90% {
+        transform: none;
+        animation-timing-function: ease-in
+    }
+    95% {
+        transform: translateX(-4px);
+        transform: translateY(4px);
+    }
+    100% {
+        animation-timing-function: ease-out;
     }
 }
