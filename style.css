@@ -14,7 +14,7 @@
 }
 
 #sclera {
-    animation: blink 2.4s infinite;
+    animation: blink 1s infinite;
     transform-origin: center;
     transform-box: fill-box;
 }
